@@ -36,8 +36,8 @@ function Disable-YubiKeyApplications
 
 function Configure-YubiKey
 {
-    [byte]$pinRetries = 5 #byte max is 255, retires must be 1 or more
-    [byte]$pukRetries = 3 #byte max is 255, retires must be 1 or more
+    [byte]$pinRetries = 5 #byte max is 255, retries must be 1 or more
+    [byte]$pukRetries = 3 #byte max is 255, retries must be 1 or more
     [System.String]$defaultPIN = "123456"
     [System.String]$defaultPUK = "12345678"
     [System.String]$managementKeyAlgo = "AES256"
@@ -148,7 +148,7 @@ function Test-Yubikey
     }
 }
 
-$verboseSet = $true
+[bool]$verboseSet = $true
 Test-Yubikey -Verbose:$verboseSet
 Disable-YubiKeyApplications -NFCType $NFCType -Verbose:$verboseSet
 Configure-YubiKey
