@@ -51,7 +51,7 @@ function Configure-YubiKey
     ykman piv access set-retries --pin $defaultPIN --management-key $defaultManageKey $pinRetries $pukRetries --force
 
     # Prompt user for new PIN and PUK
-    # REMOVE in variable names is used for variable/memory cleanup for sensitive variables
+    # "REMOVE" in variable names is used for variable/memory cleanup for sensitive variables
     Write-Host "`nThe PIN is what is used to access systems and services. If the PIN is blocked from too many failed login attempts, the PUK will unblock the PIN."
     Write-Host "If the PUK is blocked from too many failed login attempts also, the whole PIV needs to be reset`n-----"
     Write-Host "The FIDO2/WebAuth PIN is used for WebAuth and other systems"
